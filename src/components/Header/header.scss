@@ -1,0 +1,12 @@
+@import "../../sass/utils/variables";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 100px 40px 100px;
+    &__menu a{
+        color: $primary_color;
+        margin-left: 57px;
+    } 
+}
