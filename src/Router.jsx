@@ -15,7 +15,7 @@ function Router() {
                 <Route path='*' element={<Error404 />} />
                 <Route exact path='/' element= {<Home />} />
                 <Route exact path='/About' element= {<About />} />
-                <Route exact path='/Fiche-Logement' element= {<FicheLogement />} />
+                <Route exact path='/Fiche-Logement/:id' element= {<FicheLogement />} />
             </Routes>
             <Footer />
         </BrowserRouter>
