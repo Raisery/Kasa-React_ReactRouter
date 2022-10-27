@@ -1,0 +1,108 @@
+@import "../../sass/utils/variables";
+
+.dropdown {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &__header {
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        border: none;
+        background: $primary_color;
+        color: $white;
+        border-radius: 5px;
+        padding-left: 18px;
+        padding-right: 18px;
+
+        & h3 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        &__arrow {
+
+            &--up {
+                animation-name: rotate180;
+                animation-duration: 0.2s;
+                animation-timing-function: ease-in-out;
+                animation-direction: normal;
+                animation-fill-mode: forwards;
+            }
+
+            &--down {
+                animation-name: rotate0;
+                animation-duration: 0.2s;
+                animation-timing-function: ease-in-out;
+                animation-direction: normal;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+
+    &__content {
+        z-index: 0;
+        background: $light_grey;
+        padding: 20px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        & p {
+            font-size: 24px;
+            font-weight: 400;
+            color: $primary_color;
+        }
+    }
+}
+
+.dropdown-close {
+    animation: close 0.2s ease-in forwards;
+}
+
+.dropdown-open {
+    animation: open 0.2s ease-in forwards;
+}
+
+@keyframes rotate180 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotate0 {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes open {
+    0% {
+        max-height: 50px;
+    }
+
+    100% {
+        max-height: 300px;
+    }
+}
+
+@keyframes close {
+    0% {
+        max-height: 300px;
+    }
+
+    100% {
+        max-height: 50px;
+    }
+}

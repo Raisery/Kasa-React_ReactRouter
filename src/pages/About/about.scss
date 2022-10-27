@@ -1,0 +1,16 @@
+.about {
+    width: 100%;
+    min-height: 60vh;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 50px;
+
+    &__content {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    & .dropdown {
+        margin-bottom: 30px;
+    }
+}
