@@ -6,7 +6,6 @@ function CardContainer({data}) {
         return <Card src={card.cover} title={card.title} id={card.id} key={card.id} />
     })
 
-    console.log(mappedCards)
   return (
     <div className="card-container">
         {mappedCards}
