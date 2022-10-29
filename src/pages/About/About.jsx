@@ -2,6 +2,7 @@ import '../../css/about.css'
 import Banner from '../../components/Banner/Banner'
 import Dropdown from '../../components/Dropdown/Dropdown'
 import background from '../../assets/banner/montagnes.png'
+import "../../css/about.css"
 
 function About() {
     return (
