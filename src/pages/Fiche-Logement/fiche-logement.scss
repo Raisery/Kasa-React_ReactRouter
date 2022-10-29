@@ -15,7 +15,7 @@
             width: 100%;
             object-fit: cover;
             border-radius: 25px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         &__info {
@@ -69,6 +69,7 @@
         margin-bottom: 20px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         & .tags {
             display: flex;

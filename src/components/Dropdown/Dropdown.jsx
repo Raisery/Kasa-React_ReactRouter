@@ -2,7 +2,7 @@ import '../../css/dropdown.css'
 import arrow from "../../assets/arrow.svg"
 import { useState } from 'react'
 
-function Dropdown({title, content}) {
+function Dropdown({title, children}) {
 
     const [isOpen, setOpen] = useState(true)
     console.log(isOpen)
@@ -19,7 +19,7 @@ function Dropdown({title, content}) {
                 <img src={arrow} className={'dropdown__header__arrow'+(isOpen ? '--up' : '--down')} alt='dropdown'/>
             </button>
             <div className={'dropdown__content '}>
-                <p>{content}</p>
+                {children}
             </div>
         </div>
     )

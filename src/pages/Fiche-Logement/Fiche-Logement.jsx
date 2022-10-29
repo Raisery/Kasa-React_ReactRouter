@@ -18,7 +18,7 @@ function FicheLogement() {
     })
 
     const equipments = item.equipments.map((equip) => {
-        return <p>{equip}</p>
+        return <p key={equip+item.id}>{equip}</p>
     })
 
     const name = item.host.name.split(" ");
@@ -52,8 +52,8 @@ function FicheLogement() {
             
 
             <div className="fiche-logement__footer">
-                <Dropdown title="Description" content={item.description} />
-                <Dropdown title="Equipement" content={equipments} />
+                <Dropdown title="Description"><p>{item.description}</p></Dropdown>
+                <Dropdown title="Equipement">{equipments}</Dropdown>
             </div>
         </div>
     )

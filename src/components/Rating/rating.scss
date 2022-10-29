@@ -1,3 +1,6 @@
+@import "../../sass/utils/variables";
+
 .rating {
-    background: black;
+    display: flex;
+    gap: 10px;
 }
