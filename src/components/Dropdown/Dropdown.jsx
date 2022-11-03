@@ -3,16 +3,13 @@ import arrow from "../../assets/arrow.svg"
 import { useState } from 'react'
 
 function Dropdown({title, children}) {
-
-    const [isOpen, setOpen] = useState(true)
-    console.log(isOpen)
+    const [isOpen, setOpen] = useState(false)
     return (
-        <div className={"dropdown "} id={title}>
+        <div className={"dropdown "+(isOpen ? "dropdown-open" : "dropdown-close")} id={title}>
             <button 
                 className='dropdown__header' 
                 onClick={() => {
-                    setOpen(!isOpen)
-                    document.getElementById(title).className = "dropdown " +(isOpen ? 'dropdown-open' : 'dropdown-close')
+                        setOpen(!isOpen)
                     }
             }>
                 <h3>{title}</h3>
