@@ -21,8 +21,9 @@
         padding-right: 18px;
 
         & h3 {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: 500;
+            font-family: $font;
         }
 
         &__arrow {
@@ -53,7 +54,7 @@
         border-bottom-right-radius: 5px;
 
         & p {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: 400;
             color: $primary_color;
         }
@@ -106,4 +107,62 @@
     100% {
         max-height: 50px;
     }
+}
+
+@media screen and (max-width: 375px) {
+    .dropdown {
+
+        &__header {
+            height: 30px;
+            padding: 0 10px;
+
+            & h3 {
+                font-size: 13px;
+                line-height: 19px;
+            }
+
+            &__arrow {
+                
+                &--up {
+                    width: 10px;
+                    height: 15px;
+                }
+
+                &--down {
+                    width: 10px;
+                    height: 15px;
+                }
+            }
+        }
+
+        &__content {
+            padding: 12px;
+
+            & p {
+                font-size: 12px;
+                font-weight: 400;
+                color: $primary_color;
+            }
+        }
+    }
+
+    @keyframes open {
+    0% {
+        max-height: 30px;
+    }
+
+    100% {
+        max-height: 300px;
+    }
+}
+
+@keyframes close {
+    0% {
+        max-height: 300px;
+    }
+
+    100% {
+        max-height: 30px;
+    }
+}
 }

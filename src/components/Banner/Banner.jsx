@@ -1,10 +1,10 @@
 import "../../css/banner.css"
 
-function Banner({image}) {
+function Banner({image, children}) {
   return (
     <div className="banner">
       <img src={image} alt="Banniére" />
-      <h1>Chez vous, partout et ailleurs</h1>
+      <h1>{children}</h1>
     </div>
   );
 }

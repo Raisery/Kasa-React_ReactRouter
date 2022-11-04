@@ -7,7 +7,7 @@ import background from '../../assets/banner/foret.png'
 function Home() {
     return (
         <div className="home">
-            <Banner image={background} />
+            <Banner image={background}>Chez vous, partout et ailleurs</Banner>
             <CardContainer data={data}/>
         </div>
     )

@@ -4,3 +4,17 @@
     display: flex;
     gap: 10px;
 }
+
+@media screen and (max-width: 375px){
+ .rating {
+    height: 100%;
+    padding: 0;
+    background: none;
+    gap: 5px;
+
+    & img {
+        height: 15px;
+        width: 15px;
+    }
+ }   
+}

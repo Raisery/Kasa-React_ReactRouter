@@ -10,3 +10,18 @@
         margin-left: 57px;
     } 
 }
+
+@media screen and (max-width: 375px){
+    .header {
+        & img {
+            height: 47px;
+        }
+        padding: 20px;
+        &__menu a {
+            margin-left: 10px;
+            font-size: 12px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}
