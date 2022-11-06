@@ -3,11 +3,17 @@ import { Link } from "react-router-dom";
 
 function Error() {
     return (
-        <div className="error_404">
-            <h1>404</h1>
-            <h2>Oups! La page que vous demandez n'existe pas</h2>
-            <Link to='/'>Retourner sur la page d'accueil</Link>
-        </div>
+        <main>
+            <div className="error_404">
+                <h1>404</h1>
+                <div>
+                    <p>Oups! La page que</p>
+                    <p> vous demandez n'existe pas</p>
+                </div>
+                <Link to='/'>Retourner sur la page d'accueil</Link>
+            </div>
+        </main>
+        
     )
 }
  

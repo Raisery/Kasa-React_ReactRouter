@@ -2,10 +2,10 @@
 
 .error_404 {
     display: flex;
+    height: calc(100vh - 138px - 210px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 148px - 210px);
     padding: 0;
     margin: 0;
     & h1 {
@@ -14,33 +14,40 @@
         color: $primary_color;
     }
 
-    & h2 {
-        font-size: 36px;
-        font-weight: 500;
-        color: $primary_color;
+    & div {
+        display: flex;
         margin-bottom: 180px;
     }
 
+    & p {
+        font-size: 36px;
+        font-weight: 500;
+        color: $primary_color;
+        margin-left: 10px;
+    }
+
     & a {
-        margin-bottom: 160px;
         color: $primary_color;
     }
 }
 
 @media screen and (max-width: 375px) {
     .error_404 {
-        height: calc(100vh - 80px - 210px);
+        height: calc(100vh - 87px - 210px);
         & h1 {
-            margin-top: 220px;
             font-size: 96px;
         }
 
-        & h2 {
+        & div {
+            display: block;
+            margin-bottom: 130px;
+        }
+
+        & p {
             width: 260px;
             font-size: 18px;
             line-height: 25px;
             text-align: center;
-            margin-bottom: 130px;
         }
 
         & a {

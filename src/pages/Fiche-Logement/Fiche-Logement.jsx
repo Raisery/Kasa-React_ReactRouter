@@ -50,41 +50,44 @@ function FicheLogement() {
     }
 
     return (
-        <div className="fiche-logement">
+        <main>
+            <div className="fiche-logement">
 
-            <div className="fiche-logement__header">
-                <div className="slider">
-                    <button className={"slider__arrow "+hidden} id="arrow_left" onClick={() => {slideShow(-1)}}><img src={slide_arrow} alt="Précédente"/></button>
-                    <button className={"slider__arrow "+hidden} id="arrow_right" onClick={() => {slideShow((1))}}><img src={slide_arrow} alt="Suivante"/></button>
-                    <div className="slider__content">
-                        {slides}
-                    </div>
-                </div>                
-            </div>
-            
-            <div className="fiche-logement__infos">
-                <div className="fiche-logement__infos__left">
-                    <h1>{item.title}</h1>
-                    <h2>{item.location}</h2>
-                    <div className="tags">{tags}</div>
-                </div>
-                <div className="fiche-logement__infos__right">
-                    <div className="host">
-                        <div className="host__name">
-                            <p>{name[0]}</p>
-                            <p>{name[1]}</p>
+                <div className="fiche-logement__header">
+                    <div className="slider">
+                        <button className={"slider__arrow "+hidden} id="arrow_left" onClick={() => {slideShow(-1)}}><img src={slide_arrow} alt="Précédente"/></button>
+                        <button className={"slider__arrow "+hidden} id="arrow_right" onClick={() => {slideShow((1))}}><img src={slide_arrow} alt="Suivante"/></button>
+                        <div className="slider__content">
+                            {slides}
                         </div>
-                    <img className="host__img" src={item.host.picture} alt={item.host.name} />
+                    </div>                
+                </div>
+                
+                <div className="fiche-logement__infos">
+                    <div className="fiche-logement__infos__left">
+                        <h1>{item.title}</h1>
+                        <h2>{item.location}</h2>
+                        <div className="tags">{tags}</div>
                     </div>
-                    <Rating rate={item.rating} />
+                    <div className="fiche-logement__infos__right">
+                        <div className="host">
+                            <div className="host__name">
+                                <p>{name[0]}</p>
+                                <p>{name[1]}</p>
+                            </div>
+                        <img className="host__img" src={item.host.picture} alt={item.host.name} />
+                        </div>
+                        <Rating rate={item.rating} />
+                    </div>
+                </div>
+                
+                <div className="fiche-logement__footer">
+                    <Dropdown title="Description"><p>{item.description}</p></Dropdown>
+                    <Dropdown title="Equipement">{equipments}</Dropdown>
                 </div>
             </div>
-            
-            <div className="fiche-logement__footer">
-                <Dropdown title="Description"><p>{item.description}</p></Dropdown>
-                <Dropdown title="Equipement">{equipments}</Dropdown>
-            </div>
-        </div>
+        </main>
+        
     )
 }
 
